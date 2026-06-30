@@ -1,0 +1,146 @@
+.main {
+  width: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--motoin-black) 0%, var(--motoin-gray) 100%);
+  color: var(--motoin-white);
+  padding: 8rem 0 6rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--motoin-red);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, var(--motoin-white), var(--motoin-cream));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  color: var(--motoin-light-gray);
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryBtn {
+  background: var(--motoin-red);
+  color: var(--motoin-white);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--motoin-red);
+}
+
+.primaryBtn:hover {
+  background: var(--motoin-red-hover);
+  border-color: var(--motoin-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: var(--motoin-white);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--motoin-white);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.highlightCard {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.highlightCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: var(--motoin-gold);
+}
+
+.highlightCard h3 {
+  font-size: 1.125rem;
+  color: var(--foreground);
+}
+
+.whyChooseUs {
+  background: var(--motoin-black);
+  padding: 6rem 0;
+  color: var(--motoin-white);
+}
+
+.featureList {
+  list-style: none;
+  max-width: 600px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.featureList li {
+  font-size: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--motoin-gold);
+  transition: transform 0.2s ease;
+}
+
+.featureList li:hover {
+  transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .ctaGroup {
+    flex-direction: column;
+  }
+}

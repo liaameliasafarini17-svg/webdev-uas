@@ -1,0 +1,125 @@
+.main {
+  padding: 6rem 0;
+  background: var(--motoin-light-gray);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--motoin-white);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.recommended {
+  border: 2px solid var(--motoin-red);
+  transform: scale(1.05);
+}
+
+.recommended:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--motoin-red);
+  color: var(--motoin-white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--motoin-black);
+}
+
+.cardSubtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  min-height: 40px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--motoin-red);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--motoin-light-gray);
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.features li {
+  margin-bottom: 1rem;
+  color: var(--motoin-gray);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bookBtn {
+  display: block;
+  text-align: center;
+  background: var(--motoin-black);
+  color: var(--motoin-white);
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.recommended .bookBtn {
+  background: var(--motoin-red);
+}
+
+.bookBtn:hover {
+  background: var(--motoin-red-hover);
+}
+
+.recommended .bookBtn:hover {
+  background: var(--motoin-black);
+}
+
+@media (max-width: 1024px) {
+  .recommended {
+    transform: scale(1);
+  }
+  .recommended:hover {
+    transform: translateY(-10px);
+  }
+}
