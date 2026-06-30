@@ -15,6 +15,7 @@ export default function AdminLayout({
         <nav className="admin-nav">
           <Link href="/admin/bookings">Bookings</Link>
           <Link href="/admin/calendar">Calendar</Link>
+          <Link href="/admin/packages">Packages</Link>
           <Link href="/admin/partnerships">Partnerships</Link>
           <Link href="/" target="_blank">View Live Site ↗</Link>
         </nav>
